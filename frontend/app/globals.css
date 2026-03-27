@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --brand-blue: #0233bd;
+  --brand-teal: #3adfec;
+  --brand-pink: #bf0696;
+  --brand-violet: #9747ff;
+  --hero-bg: #f5f8fe;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), Inter, sans-serif;
+  overflow-x: hidden;
+}
+
+.cio-bg-blue {
+  background: radial-gradient(circle at 50% 100%, rgba(2, 51, 189, 1) 1%, rgb(4, 2, 56) 100%);
+}
+
+.hero-bg {
+  background-color: var(--hero-bg);
+  background-image: url('https://assets.cdn.clsrio.com/www/hero-bg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(1rem); }
+}
+
+.floating {
+  animation: floating 2.5s linear infinite;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.slide-up {
+  animation: slideUp 0.7s ease-in-out forwards;
+}
